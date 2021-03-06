@@ -40,23 +40,16 @@ public class CheckOutPage {
 	private WebElement payByBankWireOption;
 
 	@FindBy(css = "#cart_navigation > button > span")
-	private  WebElement confirmOrder;
+	private WebElement confirmOrder;
 
 	@FindBy(css = "#center_column > div > p > strong")
 	private WebElement orderConfirmationMessage;
-
 
 
 	public Boolean checkTitle(String title) {
 		return pageTitle.getText().equals(title);
 	}
 
-
-
-
-	public Boolean checkOrderMessage(String orderMessage) {
-		return orderConfirmationMessage.getText().equals(orderMessage);
-	}
 
 	public void goToCheckout() {
 		WebDriverWait wait = new WebDriverWait(driver, Constants.TIMEOUT);
@@ -76,7 +69,7 @@ public class CheckOutPage {
 
 	public void confirmShippingCheckBox() {
 		WebDriverWait wait = new WebDriverWait(driver, Constants.TIMEOUT);
-		wait.until(ExpectedConditions.elementToBeClickable(confirmShippingCheckBox));
+		wait.until(ExpectedConditions.elementToBeClickable(checkoutButtonConfirmShipping));
 
 		confirmShippingCheckBox.click();
 		checkoutButtonConfirmShipping.click();
@@ -90,18 +83,19 @@ public class CheckOutPage {
 		payByBankWireOption.click();
 	}
 
+	public void confirmFinalOrder() {
+		WebDriverWait wait = new WebDriverWait(driver, Constants.TIMEOUT);
+		wait.until(ExpectedConditions.elementToBeClickable(confirmOrder));
+
+		confirmOrder.click();
+	}
 
 
-
-
-
-
-
-
-
-
-
-
+	public Boolean checkFinalStatus () {
+		WebDriverWait wait = new WebDriverWait(driver, Constants.TIMEOUT);
+		wait.until(ExpectedConditions.elementToBeClickable(orderConfirmationMessage));
+		return orderConfirmationMessage.getText().equals(Constants.COMPLETE_ORDER);
+	}
 
 
 }
