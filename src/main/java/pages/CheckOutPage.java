@@ -45,10 +45,15 @@ public class CheckOutPage {
 	@FindBy(css = "#center_column > div > p > strong")
 	private WebElement orderConfirmationMessage;
 
+	@FindBy(id = "summary_products_quantity")
+	private WebElement summaryProducts;
 
 	public Boolean checkTitle(String title) {
 		return pageTitle.getText().equals(title);
 	}
+
+
+
 
 
 	public void goToCheckout() {
@@ -95,6 +100,11 @@ public class CheckOutPage {
 		WebDriverWait wait = new WebDriverWait(driver, Constants.TIMEOUT);
 		wait.until(ExpectedConditions.elementToBeClickable(orderConfirmationMessage));
 		return orderConfirmationMessage.getText().equals(Constants.COMPLETE_ORDER);
+	}
+
+
+	public String summaryProducts () {
+		return summaryProducts.getText();
 	}
 
 
