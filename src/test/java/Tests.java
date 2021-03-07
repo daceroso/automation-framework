@@ -12,6 +12,7 @@ import utils.Constants;
 import utils.FrameworkProperties;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class Tests {
@@ -52,7 +53,7 @@ public class Tests {
 	}
 
 	@Test
-	public void testingTheFullBuyingProcess(){
+	public void test03TestingTheFullBuyingProcess(){
 		driver.get(Constants.URL);
 		homePage.addFirstElementToCart();
 		homePage.addSecondElementToCart();
@@ -61,7 +62,10 @@ public class Tests {
 		checkOutPage.confirmShippingCheckBox();
 		checkOutPage.payByBankWire();
 		checkOutPage.confirmFinalOrder();
-		assertEquals(true, checkOutPage.checkFinalStatus());
+		assertTrue(checkOutPage.checkFinalStatus());
+
+
+
 
 
 	}
