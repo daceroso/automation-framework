@@ -49,7 +49,7 @@ public class Tests {
 		driver.get(Constants.URL);
 		homePage.addFirstElementToCart();
 		homePage.addSecondElementToCart();
-		assertEquals(Constants.CART_QUANTITY_TEXT, checkOutPage.summaryProducts());
+		assertEquals(Constants.CART_QUANTITY_TEST, checkOutPage.summaryProducts());
 	}
 
 	@Test

@@ -9,12 +9,13 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.Constants;
+import utils.Utils;
 
 
 public class HomePage {
 	private WebDriver driver;
 
-	public HomePage(){
+	public HomePage() {
 		driver = DriverSingleton.getDriver();
 		PageFactory.initElements(driver, this);
 	}
@@ -46,7 +47,7 @@ public class HomePage {
 	@FindBy(css = "#header > div.nav > div > div > nav > div:nth-child(1) > a > span")
 	private WebElement username;
 
-	@FindBy(id="search_query_top")
+	@FindBy(id = "search_query_top")
 	private WebElement searchBar;
 
 	@FindBy(css = "#searchbox > button")
@@ -56,13 +57,13 @@ public class HomePage {
 	private WebElement searchResults;
 
 
-	public Boolean searchElement(String searchStr){
+	public Boolean searchElement(String searchStr) {
 		searchBar.sendKeys(searchStr);
 		searchButton.click();
 
 		try {
 			if (searchResults.isEnabled())
-					return true;
+				return true;
 		} catch (Exception e) {
 			return false;
 		}
@@ -74,7 +75,7 @@ public class HomePage {
 	}
 
 
-	public void clickSignIn(){
+	public void clickSignIn() {
 		WebDriverWait wait = new WebDriverWait(driver, Constants.TIMEOUT);
 		wait.until(ExpectedConditions.elementToBeClickable(signInButton));
 
@@ -82,7 +83,7 @@ public class HomePage {
 	}
 
 
-	public void addFirstElementToCart(){
+	public void addFirstElementToCart() {
 
 		Actions hover = new Actions(driver);
 		hover.moveToElement(firstElement).build().perform();
@@ -90,13 +91,15 @@ public class HomePage {
 		WebDriverWait wait = new WebDriverWait(driver, Constants.TIMEOUT);
 		wait.until(ExpectedConditions.elementToBeClickable(continueShoppingButton));
 		continueShoppingButton.click();
-		if(cart.getText().contains(Constants.CART_QUANTITY))
+		if (cart.getText().contains(Constants.CART_QUANTITY)) {
 			System.out.println("Cart has been updated");
-		else
+		} else {
 			System.out.println("Cart has not been updated");
+			Utils.takeScreenshot();
+		}
 	}
 
-	public void addSecondElementToCart(){
+	public void addSecondElementToCart() {
 		Actions hover = new Actions(driver);
 		hover.moveToElement(secondElement).build().perform();
 		addToCartSecond.click();
