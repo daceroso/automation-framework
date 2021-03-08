@@ -70,7 +70,7 @@ public class HomePage {
 		return false;
 	}
 
-	public String getUsername() {
+	public String getUserName() {
 		return username.getText();
 	}
 
