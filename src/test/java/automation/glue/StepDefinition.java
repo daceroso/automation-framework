@@ -17,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 @ContextConfiguration(classes = AutomationFrameworkConfiguration.class)
 public class StepDefinition {
@@ -51,15 +52,43 @@ public class StepDefinition {
 
 	}
 
+	@When("^I add two elements to the cart")
+	public void i_add_two_elements_to_cart(){
+		homePage.addFirstElementToCart();
+		homePage.addSecondElementToCart();
+
+	}
+
 	@And("^I specify my credentials and click Login")
 	public void i_specify_my_credentials_and_click_login(){
 		signInPage.login(configurationProperties.getEmail(), configurationProperties.getPassword());
 
 	}
 
+	@And("^I proceed to checkout")
+	public void i_proceed_to_checkout() {
+		checkOutPage.goToCheckout();
+	}
+
+	@And("^I confirm address, shipping and final order$")
+	public void i_confirm_address_shipping_and_final_order() {
+		checkOutPage.goToConfirmAddress();
+		checkOutPage.confirmShippingCheckBox();
+		checkOutPage.payByBankWire();
+		checkOutPage.confirmFinalOrder();
+	}
+
+
+
+
 	@Then("^I can log into the website")
 	public void i_can_log_into_the_website(){
 		assertEquals(configurationProperties.getUsername(), homePage.getUserName());
 	}
 
+
+	@Then("^The elements are bought$")
+	public void the_elements_are_bought() {
+		assertTrue(checkOutPage.checkFinalStatus());
+	}
 }
