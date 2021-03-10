@@ -5,10 +5,7 @@ import automation.drivers.DriverSingleton;
 import automation.pages.CheckOutPage;
 import automation.pages.HomePage;
 import automation.pages.SignInPage;
-import automation.utils.ConfigurationProperties;
-import automation.utils.Constants;
-import automation.utils.TestCases;
-import automation.utils.Utils;
+import automation.utils.*;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -40,35 +37,41 @@ public class StepDefinition {
 	ConfigurationProperties configurationProperties;
 
 	@Before
-	public void initializeObject(){
+	public void initializeObject() {
 		DriverSingleton.getInstance(configurationProperties.getBrowser());
 		homePage = new HomePage();
 		signInPage = new SignInPage();
 		checkOutPage = new CheckOutPage();
-		TestCases [] tests = TestCases.values();
+		TestCases[] tests = TestCases.values();
 		test = report.startTest(tests[Utils.testCount].getTestName());
+		Log.getLogData(Log.class.getName());
+		Log.startTest(tests[Utils.testCount].getTestName());
+		Log.endTest(tests[Utils.testCount].getTestName());
+
 		Utils.testCount++;
 
 
 	}
 
 	@Given("^I go to the Website")
-	public void i_go_to_the_website(){
+	public void i_go_to_the_website() {
 		driver = DriverSingleton.getDriver();
 		driver.get(Constants.URL);
+		Log.info("Navigating to " + Constants.URL);
 		test.log(LogStatus.PASS, "Navigation to " + Constants.URL);
 
 	}
 
 	@When("^I click on Sign In button")
-	public void i_click_on_sign_in_button(){
+	public void i_click_on_sign_in_button() {
 		homePage.clickSignIn();
+		Log.info("Sign in button has been clicked");
 		test.log(LogStatus.PASS, "Sign in button has been clicked");
 
 	}
 
 	@When("^I add two elements to the cart")
-	public void i_add_two_elements_to_cart(){
+	public void i_add_two_elements_to_cart() {
 		homePage.addFirstElementToCart();
 		homePage.addSecondElementToCart();
 		test.log(LogStatus.PASS, "Two elements were added to the cart");
@@ -76,7 +79,7 @@ public class StepDefinition {
 	}
 
 	@And("^I specify my credentials and click Login")
-	public void i_specify_my_credentials_and_click_login(){
+	public void i_specify_my_credentials_and_click_login() {
 		signInPage.login(configurationProperties.getEmail(), configurationProperties.getPassword());
 		test.log(LogStatus.PASS, "Login has been clicked");
 
@@ -99,14 +102,16 @@ public class StepDefinition {
 	}
 
 
-
-
 	@Then("^I can log into the website")
-	public void i_can_log_into_the_website(){
-		if (configurationProperties.getUsername().equals(homePage.getUserName()))
+	public void i_can_log_into_the_website() {
+		if (configurationProperties.getUsername().equals(homePage.getUserName())) {
+
+			Log.info("The authentication is sucessful");
 			test.log(LogStatus.PASS, "The authentication is successful");
-		else
+		} else {
+			Log.error("Authentication is not successful");
 			test.log(LogStatus.FAIL, "Authentication is not successful");
+		}
 
 		assertEquals(configurationProperties.getUsername(), homePage.getUserName());
 	}
@@ -115,7 +120,7 @@ public class StepDefinition {
 	@Then("^The elements are bought$")
 	public void the_elements_are_bought() {
 
-		if(checkOutPage.checkFinalStatus())
+		if (checkOutPage.checkFinalStatus())
 			test.log(LogStatus.PASS, "The two items are bought");
 		else
 			test.log(LogStatus.FAIL, "The items weren't bought");
@@ -124,9 +129,10 @@ public class StepDefinition {
 	}
 
 	@After
-	public void closeObject(){
+	public void closeObject() {
 		report.endTest(test);
 		report.flush();
 		DriverSingleton.closeObjectInstance();
+		Log.info("Browser Closed");
 	}
 }
