@@ -17,8 +17,12 @@ public class ConfigurationProperties {
 	@Value("${password}")
 	private String password;
 
-	@Value("${user}")
-	private String userName;
+	@Value("${nameTest}")
+	private String name;
+
+	public String getName() {
+		return name;
+	}
 
 	public String getBrowser() {
 		return browser;
@@ -32,7 +36,5 @@ public class ConfigurationProperties {
 		return password;
 	}
 
-	public String getUsername() {
-		return userName;
-	}
+
 }

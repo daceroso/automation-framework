@@ -9,7 +9,6 @@ import automation.utils.*;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -21,7 +20,6 @@ import org.springframework.test.context.ContextConfiguration;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-
 @ContextConfiguration(classes = AutomationFrameworkConfiguration.class)
 public class StepDefinition {
 
@@ -104,16 +102,16 @@ public class StepDefinition {
 
 	@Then("^I can log into the website")
 	public void i_can_log_into_the_website() {
-		if (configurationProperties.getUsername().equals(homePage.getUserName())) {
+		if (configurationProperties.getName().equals(homePage.getUserName())) {
 
 			Log.info("The authentication is sucessful");
 			test.log(LogStatus.PASS, "The authentication is successful");
 		} else {
-			Log.error("Authentication is not successful");
+			Log.fatal("Authentication is not successful");
 			test.log(LogStatus.FAIL, "Authentication is not successful");
 		}
 
-		assertEquals(configurationProperties.getUsername(), homePage.getUserName());
+		assertEquals(configurationProperties.getName(), homePage.getUserName());
 	}
 
 
@@ -127,12 +125,12 @@ public class StepDefinition {
 
 		assertTrue(checkOutPage.checkFinalStatus());
 	}
-
+/*
 	@After
 	public void closeObject() {
 		report.endTest(test);
 		report.flush();
 		DriverSingleton.closeObjectInstance();
 		Log.info("Browser Closed");
-	}
+	}*/
 }

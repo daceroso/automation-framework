@@ -12,7 +12,7 @@ public class Constants {
 	public static final String EMAIL = "email";
 	public static final String PASSWORD = "password";
 	public static final String URL = "http://automationpractice.com";
-	public static final String USERNAME = "user";
+	public static final String USERNAME_TEST = "nameTest";
 	public static final String BROWSER = "browser";
 	public static final String CART_QUANTITY_TEST = "2 Products";
 	public static final String SCREENSHOTS_FOLDER = "screenshots\\";

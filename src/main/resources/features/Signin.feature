@@ -7,7 +7,6 @@ Feature: Shopping Automation
     Then I can log into the website
 
 
-
   Scenario: Testing the purchase of two items
     Given I go to the Website
     When I add two elements to the cart
