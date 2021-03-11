@@ -9,6 +9,7 @@ import automation.utils.*;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
+import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -83,21 +84,23 @@ public class StepDefinition {
 
 	}
 
+	@And("^I confirm address, shipping and final order")
+	public void i_confirm_address_shipping_and_final_order() {
+		signInPage.login(configurationProperties.getEmail(), configurationProperties.getPassword());
+		checkOutPage.goToConfirmAddress();
+		checkOutPage.confirmShippingCheckBox();
+		checkOutPage.payByBankWire();
+		checkOutPage.confirmFinalOrder();
+		test.log(LogStatus.PASS, "We confirm the final order");
+	}
+
+
 	@And("^I proceed to checkout")
 	public void i_proceed_to_checkout() {
 		checkOutPage.goToCheckout();
 		test.log(LogStatus.PASS, "We proceed to checkout");
 	}
 
-	@And("^I confirm address, shipping and final order")
-	public void i_confirm_address_shipping_and_final_order() {
-		checkOutPage.goToConfirmAddress();
-		checkOutPage.confirmShippingCheckBox();
-		checkOutPage.payByBankWire();
-		checkOutPage.confirmFinalOrder();
-		test.log(LogStatus.PASS, "We confirm the final order");
-
-	}
 
 
 	@Then("^I can log into the website")
@@ -125,12 +128,12 @@ public class StepDefinition {
 
 		assertTrue(checkOutPage.checkFinalStatus());
 	}
-/*
+
 	@After
 	public void closeObject() {
 		report.endTest(test);
 		report.flush();
 		DriverSingleton.closeObjectInstance();
 		Log.info("Browser Closed");
-	}*/
+	}
 }

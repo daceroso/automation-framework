@@ -92,3 +92,107 @@
 2021-03-11 03:49:58,006 INFO  [Log] Test: Testing the purchase of two items has started 
 2021-03-11 03:49:58,006 INFO  [Log] Test: Testing the purchase of two items has ended 
 2021-03-11 03:49:59,409 INFO  [Log] Navigating to http://automationpractice.com 
+2021-03-11 03:55:12,998 INFO  [Log] Test: Testing the authentication has started 
+2021-03-11 03:55:12,999 INFO  [Log] Test: Testing the authentication has ended 
+2021-03-11 03:55:16,854 INFO  [Log] Navigating to http://automationpractice.com 
+2021-03-11 03:55:19,694 INFO  [Log] Sign in button has been clicked 
+2021-03-11 03:55:24,350 INFO  [Log] The authentication is sucessful 
+2021-03-11 03:55:24,382 INFO  [Log] Test: Testing the purchase of two items has started 
+2021-03-11 03:55:24,382 INFO  [Log] Test: Testing the purchase of two items has ended 
+2021-03-11 03:55:27,079 INFO  [Log] Navigating to http://automationpractice.com 
+2021-03-11 03:56:39,152 INFO  [Log] Test: Testing the authentication has started 
+2021-03-11 03:56:39,157 INFO  [Log] Test: Testing the authentication has ended 
+2021-03-11 03:56:42,606 INFO  [Log] Navigating to http://automationpractice.com 
+2021-03-11 03:56:44,477 INFO  [Log] Sign in button has been clicked 
+2021-03-11 03:56:47,159 INFO  [Log] The authentication is sucessful 
+2021-03-11 03:56:47,199 INFO  [Log] Test: Testing the purchase of two items has started 
+2021-03-11 03:56:47,199 INFO  [Log] Test: Testing the purchase of two items has ended 
+2021-03-11 03:56:49,225 INFO  [Log] Navigating to http://automationpractice.com 
+2021-03-11 03:58:02,591 INFO  [Log] Test: Testing the authentication has started 
+2021-03-11 03:58:02,596 INFO  [Log] Test: Testing the authentication has ended 
+2021-03-11 03:58:05,827 INFO  [Log] Navigating to http://automationpractice.com 
+2021-03-11 03:58:07,368 INFO  [Log] Sign in button has been clicked 
+2021-03-11 03:58:09,411 INFO  [Log] The authentication is sucessful 
+2021-03-11 03:58:09,441 INFO  [Log] Test: Testing the purchase of two items has started 
+2021-03-11 03:58:09,442 INFO  [Log] Test: Testing the purchase of two items has ended 
+2021-03-11 03:58:10,889 INFO  [Log] Navigating to http://automationpractice.com 
+2021-03-11 04:00:35,547 INFO  [Log] Test: Testing the authentication has started 
+2021-03-11 04:00:35,547 INFO  [Log] Test: Testing the authentication has ended 
+2021-03-11 04:00:39,798 INFO  [Log] Navigating to http://automationpractice.com 
+2021-03-11 04:00:41,302 INFO  [Log] Sign in button has been clicked 
+2021-03-11 04:00:42,751 INFO  [Log] The authentication is sucessful 
+2021-03-11 04:00:42,986 INFO  [Log] Browser Closed 
+2021-03-11 04:00:43,502 INFO  [Log] Test: Testing the purchase of two items has started 
+2021-03-11 04:00:43,503 INFO  [Log] Test: Testing the purchase of two items has ended 
+2021-03-11 04:00:49,787 INFO  [Log] Navigating to http://automationpractice.com 
+2021-03-11 04:01:18,007 INFO  [Log] Browser Closed 
+2021-03-11 04:02:16,167 INFO  [Log] Test: Testing the authentication has started 
+2021-03-11 04:02:16,169 INFO  [Log] Test: Testing the authentication has ended 
+2021-03-11 04:02:19,952 INFO  [Log] Navigating to http://automationpractice.com 
+2021-03-11 04:02:22,602 INFO  [Log] Sign in button has been clicked 
+2021-03-11 04:02:26,410 INFO  [Log] The authentication is sucessful 
+2021-03-11 04:02:26,638 INFO  [Log] Browser Closed 
+2021-03-11 04:02:27,086 INFO  [Log] Test: Testing the purchase of two items has started 
+2021-03-11 04:02:27,086 INFO  [Log] Test: Testing the purchase of two items has ended 
+2021-03-11 04:02:30,988 INFO  [Log] Navigating to http://automationpractice.com 
+2021-03-11 04:02:59,949 INFO  [Log] Browser Closed 
+2021-03-11 04:19:39,835 INFO  [Log] Test: Testing the authentication has started 
+2021-03-11 04:19:39,836 INFO  [Log] Test: Testing the authentication has ended 
+2021-03-11 04:19:45,435 INFO  [Log] Navigating to http://automationpractice.com 
+2021-03-11 04:19:47,879 INFO  [Log] Sign in button has been clicked 
+2021-03-11 04:19:51,683 FATAL [Log] Authentication is not successful 
+2021-03-11 04:19:51,920 INFO  [Log] Browser Closed 
+2021-03-11 04:19:52,361 INFO  [Log] Test: Testing the purchase of two items has started 
+2021-03-11 04:19:52,361 INFO  [Log] Test: Testing the purchase of two items has ended 
+2021-03-11 04:19:59,286 INFO  [Log] Navigating to http://automationpractice.com 
+2021-03-11 04:20:25,039 INFO  [Log] Browser Closed 
+2021-03-11 04:20:57,244 INFO  [Log] Test: Testing the authentication has started 
+2021-03-11 04:20:57,245 INFO  [Log] Test: Testing the authentication has ended 
+2021-03-11 04:21:00,997 INFO  [Log] Navigating to http://automationpractice.com 
+2021-03-11 04:21:03,082 INFO  [Log] Sign in button has been clicked 
+2021-03-11 04:21:04,932 FATAL [Log] Authentication is not successful 
+2021-03-11 04:21:05,161 INFO  [Log] Browser Closed 
+2021-03-11 04:21:05,600 INFO  [Log] Test: Testing the purchase of two items has started 
+2021-03-11 04:21:05,608 INFO  [Log] Test: Testing the purchase of two items has ended 
+2021-03-11 04:21:08,843 INFO  [Log] Navigating to http://automationpractice.com 
+2021-03-11 04:21:36,378 INFO  [Log] Browser Closed 
+2021-03-11 04:22:22,355 INFO  [Log] Test: Testing the authentication has started 
+2021-03-11 04:22:22,356 INFO  [Log] Test: Testing the authentication has ended 
+2021-03-11 04:22:25,781 INFO  [Log] Navigating to http://automationpractice.com 
+2021-03-11 04:22:27,757 INFO  [Log] Sign in button has been clicked 
+2021-03-11 04:22:29,411 INFO  [Log] The authentication is sucessful 
+2021-03-11 04:22:29,637 INFO  [Log] Browser Closed 
+2021-03-11 04:22:30,056 INFO  [Log] Test: Testing the purchase of two items has started 
+2021-03-11 04:22:30,057 INFO  [Log] Test: Testing the purchase of two items has ended 
+2021-03-11 04:22:33,607 INFO  [Log] Navigating to http://automationpractice.com 
+2021-03-11 04:23:01,328 INFO  [Log] Browser Closed 
+2021-03-11 04:23:50,164 INFO  [Log] Test: Testing the authentication has started 
+2021-03-11 04:23:50,165 INFO  [Log] Test: Testing the authentication has ended 
+2021-03-11 04:23:53,791 INFO  [Log] Navigating to http://automationpractice.com 
+2021-03-11 04:23:55,171 INFO  [Log] Sign in button has been clicked 
+2021-03-11 04:23:56,560 INFO  [Log] The authentication is sucessful 
+2021-03-11 04:23:56,787 INFO  [Log] Browser Closed 
+2021-03-11 04:23:57,201 INFO  [Log] Test: Testing the purchase of two items has started 
+2021-03-11 04:23:57,202 INFO  [Log] Test: Testing the purchase of two items has ended 
+2021-03-11 04:24:00,342 INFO  [Log] Navigating to http://automationpractice.com 
+2021-03-11 04:24:27,177 INFO  [Log] Browser Closed 
+2021-03-11 04:25:36,146 INFO  [Log] Test: Testing the authentication has started 
+2021-03-11 04:25:36,146 INFO  [Log] Test: Testing the authentication has ended 
+2021-03-11 04:25:51,264 INFO  [Log] Navigating to http://automationpractice.com 
+2021-03-11 04:25:53,890 INFO  [Log] Sign in button has been clicked 
+2021-03-11 04:25:55,340 INFO  [Log] The authentication is sucessful 
+2021-03-11 04:25:55,596 INFO  [Log] Browser Closed 
+2021-03-11 04:25:56,057 INFO  [Log] Test: Testing the purchase of two items has started 
+2021-03-11 04:25:56,060 INFO  [Log] Test: Testing the purchase of two items has ended 
+2021-03-11 04:26:00,221 INFO  [Log] Navigating to http://automationpractice.com 
+2021-03-11 04:26:22,055 INFO  [Log] Browser Closed 
+2021-03-11 04:28:09,719 INFO  [Log] Test: Testing the authentication has started 
+2021-03-11 04:28:09,721 INFO  [Log] Test: Testing the authentication has ended 
+2021-03-11 04:28:14,786 INFO  [Log] Navigating to http://automationpractice.com 
+2021-03-11 04:28:16,822 INFO  [Log] Sign in button has been clicked 
+2021-03-11 04:28:18,805 INFO  [Log] The authentication is sucessful 
+2021-03-11 04:28:19,039 INFO  [Log] Browser Closed 
+2021-03-11 04:28:19,476 INFO  [Log] Test: Testing the purchase of two items has started 
+2021-03-11 04:28:19,477 INFO  [Log] Test: Testing the purchase of two items has ended 
+2021-03-11 04:28:23,413 INFO  [Log] Navigating to http://automationpractice.com 
+2021-03-11 04:28:36,673 INFO  [Log] Browser Closed 
